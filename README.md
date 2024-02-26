@@ -4,11 +4,12 @@ This is a simple decentralized application (DApp) for banking. Users can deposit
 ## Description
 This is a simple Solidity smart contract comprising five functions: three user-defined functions and two automatically generated functions.
 
-The three user-defined functions are:
+The three defined functions are:
 
 - deposit(uint256 _amount): Allows users to deposit a specified amount into the contract.
 - checkBalance(): Allows users to check their balance within the contract.
 - withdraw(uint256 _withdrawAmount): Enables users to withdraw their deposits from the contract. However, withdrawal is only permitted if a deposit has been made.
+  
 The two automatically generated functions are:
 
 - noOfDeposit(): Indicates the number of deposits made by the user into the contract.
