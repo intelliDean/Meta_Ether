@@ -6,6 +6,8 @@ pragma solidity ^0.8.9;
 contract Assessment {
     address payable public owner;
     uint256 public balance;
+    uint256 public noOfDeposit;
+    uint256 public noOfWithdraw;
 
     event Deposit(uint256 amount);
     event Withdraw(uint256 amount);
@@ -31,6 +33,7 @@ contract Assessment {
         // assert transaction completed successfully
         assert(balance == _previousBalance + _amount);
 
+        noOfDeposit = noOfDeposit + 1;
         // emit the event
         emit Deposit(_amount);
     }
@@ -54,6 +57,7 @@ contract Assessment {
         // assert the balance is correct
         assert(balance == (_previousBalance - _withdrawAmount));
 
+        noOfWithdraw = noOfWithdraw + 1;
         // emit the event
         emit Withdraw(_withdrawAmount);
     }
